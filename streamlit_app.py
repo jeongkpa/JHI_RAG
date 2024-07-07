@@ -75,7 +75,7 @@ def get_text(file_paths):
         doc_list.extend(load_csv(file_path))
     return doc_list
 
-@st.cache_resource(show_spinner="Embedding documents...")
+@st.cache_resource()
 def embed_documents(_docs):
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=500,
